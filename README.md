@@ -1,5 +1,5 @@
 # Overview
-This Terraform module creates a CloudWatch Log Group and optional Stream
+This Terraform module creates a CloudWatch Log Group
 suitable for use by the Docker [Amazon CloudWatch Logs logging driver](https://docs.docker.com/engine/admin/logging/awslogs/).
 
 # Prerequisites
