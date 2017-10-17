@@ -1,8 +1,6 @@
 # Overview
-This Terraform module creates Security Groups used by various other modules,
-including Bastion instances and ECS clusters.  Security groups created include:
-* restricted SSH access to the Bastion instances
-* restricted SSH access to EC2 instances in private subnets
+This Terraform module creates a CloudWatch Log Group and optional Stream
+suitable for use by the Docker [Amazon CloudWatch Logs logging driver](https://docs.docker.com/engine/admin/logging/awslogs/).
 
 # Prerequisites
 * [Terraform](https://terraform.io/) installed and working

@@ -3,14 +3,24 @@ variable "region" {
     description = "The AWS region to deploy into, e.g. us-east-1"
 }
 
-variable "vpc_id" {
+variable "group_name" {
     type = "string"
-    description = "ID of the VPC to associate the created resources to"
+    description = "What to name the log group, e.g. docker-logs"
+}
+
+variable "retention_days" {
+    type = "string"
+    description = "How many days to save logs for, e.g. 14"
 }
 
 variable "project" {
     type = "string"
     description = "Name of the project these resources are being created for, e.g. violet-sloth"
+}
+
+variable "purpose" {
+    type = "string"
+    description = "The reason for creating the group, e.g. Holds Docker logs"
 }
 
 variable "creator" {
@@ -25,10 +35,5 @@ variable "environment" {
 
 variable "freetext" {
     type = "string"
-    description = "Information that does not fit in the other tags, e.g. end-of-life 12/31/2021"
-}
-
-variable "bastion_ingress_cidr_blocks" {
-    type = "list"
-    description = "IP ranges to allows inbound SSH access to, e.g. [98.216.147.13/32]"
+    description = "Information that does not fit in the other tags, e.g. let the Docker driver specify the stream"
 }
